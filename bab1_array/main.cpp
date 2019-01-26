@@ -1,0 +1,120 @@
+#include "Array.h"
+
+int data[100];
+int n_data;
+
+int main() {
+    cout<<endl;
+    n_data = 0;
+    input_array_terakhir(data, n_data, 5);
+    input_array_terakhir(data, n_data, 9);
+    input_array_terakhir(data, n_data, 3);
+    input_array_terakhir(data, n_data, 2);
+    input_array_terakhir(data, n_data, 9);
+    cout<<"    Output seharusnya   : 5, 9, 3, 2, 9, "<<endl;
+    cout<<"    Initial array       : ";tampil_array(data, n_data);
+    cout<<endl;
+
+    cout<<"2. Ubah code sehingga code mengimplementasikan konsep dari Abstract Data Type (ADT)"<<endl;
+    cout<<"   [press enter to continue]"<<endl;
+    cin.get();system("cls");
+    cout<<endl;
+
+    cout<<"3. Test fungsi search array"<<endl;
+    int idx;
+    idx = cari_array(data, n_data, 2);
+    cout<<"    Output seharusnya    : 3 "<<endl;
+    cout<<"    Output anda          : "<<idx<<endl;
+    idx = cari_array(data, n_data, 4);
+    cout<<"    Output seharusnya    : -1 "<<endl;
+    cout<<"    Output anda          : "<<idx<<endl;
+    idx = cari_array(data, n_data, 9);
+    cout<<"    Output seharusnya    : 1 "<<endl;
+    cout<<"    Output anda          : "<<idx<<endl;
+    cout<<"    [press enter to continue]"<<endl;
+    cin.get();system("cls");
+    cout<<endl;
+
+    cout<<"4. Test procedure tambahkan_setelah_array"<<endl;
+    cout<<"    Initial Array: ";    tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test tambahkan_setelah_array(data, n_data, 2, 4) "<<endl;
+    tambahkan_setelah_array(data, n_data, 2, 4);
+    cout<<"    Array seharusnya    : 5, 9, 3, 4, 2, 9, "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test tambahkan_setelah_array(data, n_data, 5, 6) "<<endl;
+    tambahkan_setelah_array(data, n_data, 5, 6);
+    cout<<"    Array seharusnya    : 5, 9, 3, 4, 2, 9, 6, "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test tambahkan_setelah_array(data, n_data, 0, 1) "<<endl;
+    tambahkan_setelah_array(data, n_data, 0, 1);
+    cout<<"    Array seharusnya    : 5, 1, 9, 3, 4, 2, 9, 6, "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    [press enter to continue]"<<endl;
+    cin.get();system("cls");
+    cout<<endl;
+
+    cout<<"4. Test procedure tambahkan_setelah_array"<<endl;
+    cout<<"    test tambahkan_setelah_array(data, n_data, 8, 1) "<<endl;
+    cout<<"    procedure anda seharusnya menolak input-an karena 8 > n "<<endl;
+    tambahkan_setelah_array(data, n_data, 8, 1);
+    cout<<"    Array seharusnya    : 5, 1, 9, 3, 4, 2, 9, 6, "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test tambahkan_setelah_array(data, n_data, -2, 1) "<<endl;
+    cout<<"    procedure anda seharusnya menolak input-an karena -2 < 0 "<<endl;
+    tambahkan_setelah_array(data, n_data, -2, 1);
+    cout<<"    Array seharusnya    : 5, 1, 9, 3, 4, 2, 9, 6, "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<"    [press enter to continue]"<<endl;
+    cin.get();system("cls");
+    cout<<endl;
+
+    cout<<"5. Test procedure hapus_array_pertama"<<endl;
+    n_data = 4;
+    cout<<"    Initial Array: ";    tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test hapus_array_pertama"<<endl;
+    hapus_array_pertama(data, n_data);
+    cout<<"    Array seharusnya    : 1, 9, 3, "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test hapus_array_pertama"<<endl;
+    hapus_array_pertama(data, n_data);
+    cout<<"    Array seharusnya    : 9, 3, "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test hapus_array_pertama"<<endl;
+    hapus_array_pertama(data, n_data);
+    cout<<"    Array seharusnya    : 3, "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test hapus_array_pertama"<<endl;
+    hapus_array_pertama(data, n_data);
+    cout<<"    Array seharusnya    : empty "<<endl;
+    cout<<"    Array anda          : ";tampil_array(data, n_data);
+    cout<<"    n_data : "<<n_data<<endl;
+    cout<<endl;
+    cout<<"    test hapus_array_pertama"<<endl;
+    hapus_array_pertama(data, n_data);
+    cout<<"    procedure anda seharusnya menolak input-an karena array sudah penuh "<<endl;
+    cout<<endl;
+
+    cout<<"    [press enter to continue]"<<endl;
+    cin.get();system("cls");
+    cout<<""<<endl;
+    return 0;
+}
