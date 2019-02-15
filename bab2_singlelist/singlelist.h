@@ -23,19 +23,14 @@ struct List {
     address first;
 };
 
-
-/** DIBERIKAN **/
 address allocate(infotype x);
 void deallocate(address &P);
 void createList(List &L);
 void printInfo(List L);
 void reverseList(List &L);
-
-/** DIKERJAKAN **/
 void insertFirst(List &L, address P);
 void insertLast(List &L, address P);
 void deleteFirst(List &L, address &P);
 void deleteLast(List &L, address &P);
-
 
 #endif // SINGLELIST_H_INCLUDED
