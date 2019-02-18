@@ -26,22 +26,17 @@ struct List {
 };
 
 
-/** GIVEN **/
 void createList(List &);
 address allocate(infotype);
 void deallocate(address &);
 void printInfo(List);
 void insertLast(List &L, address P);
-
-/** TODO PRACTICE **/
+void deleteFirst(List &L, address &P);
 void insertFirst(List &L, address P);
 address findElement(List L, infotype x);
 void insertAfter(List &L, address Prec, address P);
 void deleteLast(List &L, address &P);
 void deleteAfter(List &L, address Prec, address &P);
-
-/** NOT GIVEN **/
-void deleteFirst(List &L, address &P);
 
 
 #endif // DOUBLELIST_H_INCLUDED
