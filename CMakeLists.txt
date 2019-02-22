@@ -4,4 +4,5 @@ project(datastructure_cpp_basic)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(datastructure_cpp_basic
-        firstimpression/InputOutput.cpp firstimpression/Kondisi.cpp firstimpression/Perulangan.cpp firstimpression/Fungsi.cpp firstimpression/Array.cpp)
+        firstimpression/InputOutput.cpp firstimpression/Kondisi.cpp firstimpression/Perulangan.cpp firstimpression/Fungsi.cpp firstimpression/Array.cpp
+        bab2_singlelist/mainSinglelist.cpp bab2_singlelist/singlelist.cpp bab2_singlelist/singlelist.h)
