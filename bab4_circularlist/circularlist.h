@@ -27,10 +27,10 @@ struct List {
     address last;
 };
 
+
 void createList(List &);
 address allocate(infotype);
 void deallocate(address &);
-
 void insertFirst(List &L, address P);
 void printInfo(List);
 void insertLast(List &L, address P);

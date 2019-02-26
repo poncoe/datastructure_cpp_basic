@@ -10,6 +10,8 @@ int main() {
     address P, Prec;
     infotype X, Y;
 
+    cout<<endl;
+
 
     cout<<"1. Uji project yang diberikan: Allocation and Deallocation"<<endl;
     X = 70;
@@ -276,9 +278,8 @@ int main() {
     cin.get();system("cls");
     cout<<endl;
 
-    cout<<"SELAMAT ANDA TELAH MENYELESAIKAN MODUL 4"<<endl;
     cout<<endl;
-    cout<<"BONUS: Separate Even Odd"<<endl;
+    cout<<"Separate Even Odd"<<endl;
     cout<<endl;
     cout<<"Examine the provided separateEvenOdd procedure, and observe the result below"<<endl;
     insertFirst(L,allocate(85));
@@ -300,7 +301,7 @@ int main() {
     cout<<endl;
 
 
-    cout<<"BONUS: Move Zeros"<<endl;
+    cout<<"Move Zeros"<<endl;
     cout<<endl;
     cout<<"Examine the provided moveZeros procedure, and observe the result below"<<endl;
     createList(L);
